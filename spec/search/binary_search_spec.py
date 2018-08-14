@@ -1,5 +1,5 @@
 from mamba import description, context, it
-from expects import *
+from expects import expect, equal, raise_error
 from problems.search.binary_search import binary_search
 
 with description('Binary Search') as self:
