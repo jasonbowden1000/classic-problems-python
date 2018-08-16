@@ -17,9 +17,9 @@ with description('Binary Search') as self:
             expect(binary_search(self.sorted_array, 1984)).to(equal(14))
     with context('when an element is not found'):
         with it('should throw a ValueError for the missing element'):
-            expect(lambda: binary_search(self.sorted_array, 1)).to(raise_error(ValueError, '1 is not in list'));
-            expect(lambda: binary_search(self.sorted_array, -20)).to(raise_error(ValueError, '-20 is not in list'));
-            expect(lambda: binary_search(self.sorted_array, 3000)).to(raise_error(ValueError, '3000 is not in list'));
+            expect(lambda: binary_search(self.sorted_array, 1)).to(raise_error(ValueError, '1 is not in list'))
+            expect(lambda: binary_search(self.sorted_array, -20)).to(raise_error(ValueError, '-20 is not in list'))
+            expect(lambda: binary_search(self.sorted_array, 3000)).to(raise_error(ValueError, '3000 is not in list'))
     with context('when searching an empty array'):
         with it('should throw a ValueError for the missing element'):
-            expect(lambda: binary_search([], 3000)).to(raise_error(ValueError, '3000 is not in list'));
+            expect(lambda: binary_search([], 3000)).to(raise_error(ValueError, '3000 is not in list'))
