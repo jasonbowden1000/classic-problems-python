@@ -1,14 +1,7 @@
+import string
+
 def is_palindrome(str):
-    i = 0
-    j = len(str) - 1
-    result = True
-    while i < j:
-        while ((not str[i].isalpha()) and i < j):
-            i += 1
-        while ((not str[j].isalpha()) and i < j):
-            j -= 1
-        if str[i].lower() != str[j].lower():
-            result = False
-        i += 1
-        j -= 1
-    return result
+    whitelist = set(string.ascii_lowercase)
+    str = str.lower()
+    str = ''.join([char for char in str if char in whitelist])
+    return str == str[::-1]
