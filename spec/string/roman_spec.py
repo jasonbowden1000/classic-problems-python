@@ -12,7 +12,8 @@ with description('roman_to_arabic') as self:
         expect(roman_to_arabic('MCMLXXXIX')).to(equal(1989))
 with description('arabic_to_roman') as self:
     with it('should return the Roman representation of an Arabic numeral') as self:
-        pass
+        expect(arabic_to_roman(1666)).to(equal('MDCLXVI'));
+        expect(arabic_to_roman(91)).to(equal('XCI'));
 with description('is_roman') as self:
     with it('should not accept more than three consecutive numerals') as self:
         expect(is_roman('XXXX')).to(be_none)
