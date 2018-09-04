@@ -1,4 +1,5 @@
 from functools import reduce
+import re
 
 roman_dict = {
     'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10, 'XL': 40, 'L': 50,
@@ -12,5 +13,5 @@ def roman_to_arabic(str):
 def arabic_to_roman():
     pass
 
-def is_roman():
-    pass
+def is_roman(str):
+    return re.search('^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$', str)
